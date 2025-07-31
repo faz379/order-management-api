@@ -78,6 +78,7 @@ Header: Authorization: Bearer {token}
 ```json
 {
   "name": "Nasi Goreng",
+  "description": "Nasi Goreng enak dengan cita rasa digoreng    ",
   "price": 15000,
   "stock": 100
 }
@@ -98,9 +99,42 @@ Header: Authorization: Bearer {token}
 }
 ```
 
-### 5. Lihat Riwayat Pesanan
-GET   
+
+### 5. Lihat Riwayat Pesanan (keseluruhan)
+GET `/api/orders/` 
 Header: Authorization: Bearer {token}
+
+
+
+### 6. Lihat Riwayat Pesanan (per pengguna)
+GET `/api/orders/user/{id}`  
+Header: Authorization: Bearer {token}
+
+Contoh:
+GET `/api/orders/user/4`
+
+Response:
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "user_id": 4,
+      "total_price": 30000,
+      "created_at": "2025-07-31 07:00:00",
+      "items": [
+        {
+          "product_id": 1,
+          "name": "Nasi Goreng",
+          "quantity": 2,
+          "price": 15000,
+          "subtotal": 30000
+        }
+      ]
+    }
+  ]
+}
+
 
 ## ✅ Selesai!
 
