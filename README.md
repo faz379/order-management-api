@@ -1,6 +1,6 @@
 # Order Management API
 
-Sebuah RESTful API menggunakan Laravel 11 dan JWT untuk mengelola produk dan pesanan.
+Sebuah RESTful API menggunakan Laravel 12 dan JWT untuk mengelola produk dan pesanan.
 
 ## 📦 Fitur
 - Register & Login (JWT)
@@ -134,7 +134,4 @@ Response:
     }
   ]
 }
-
-
-## ✅ Selesai!
 
