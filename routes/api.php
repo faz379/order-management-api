@@ -25,7 +25,7 @@ Route::middleware(IsAdmin::class)->group(function () {
     Route::apiResource('products', ProductController::class);
 });
 
-Route::group(['middlewware' => 'api', 'prefix' => 'orders'], function () {
+Route::group(['middleware' => 'api', 'prefix' => 'orders'], function () {
     Route::get('/', [OrderController::class, 'index']);
     Route::post('/create', [OrderController::class, 'store']);
     Route::get('/user/{id}', [OrderController::class, 'getUser']);
